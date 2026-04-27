@@ -2,27 +2,27 @@
 
 # ReverseTIT
 
-![image.png](image.png)
+![image.png](pics/image.png)
 
 - Check file thì ra đây là file ELF, chạy thử
 
-![image.png](image%201.png)
+![image.png](pics/image%201.png)
 
 → Không thấy gì lắm
 
 → Dùng IDA phân tích
 
-![image.png](image%202.png)
+![image.png](pics/image%202.png)
 
 - Nhìn vào hàm main ta thấy đầu tiên có check prefix, có load mảng để sau này check, sau đó gọi input. Trong quá trình lướt các hàm thì mình có vô tình thấy cả hàm tên **SHA1**
 
-![image.png](image%203.png)
+![image.png](pics/image%203.png)
 
 Có thể thấy ở đây len của input phải là 48, ta đã biết flag form là PTITCTF{…}.
 
 - Đi vào sec_check ta thấy đây chỉ là SHA1 20 bytes của v12 rồi trả về thôi
 
-![image.png](image%204.png)
+![image.png](pics/image%204.png)
 
 - Đi vào xem nội dung của v11:
 
@@ -134,33 +134,33 @@ print("PTITCTF{" + inside + "}")
 
 - Cho file vào IDA, xem nd hàm start ngay đầu file ta thấy nó khởi tạo rồi gọi window
 
-![image.png](image%205.png)
+![image.png](pics/image%205.png)
 
-![image.png](image%206.png)
+![image.png](pics/image%206.png)
 
 - Vào hàm đó ta thấy main ở sub_140002A30
 
-![image.png](image%207.png)
+![image.png](pics/image%207.png)
 
 - Vào main ta thấy một mớ vẽ cửa sổ, có hàm để call hàm check các kiểu nút bấm, flag… ở sub_140002070
 
-![image.png](image%208.png)
+![image.png](pics/image%208.png)
 
 - Tìm một hồi ta thấy hàm này:
 
-![image.png](image%209.png)
+![image.png](pics/image%209.png)
 
 Nó ứng với 3 nút sau trên screen:
 
-![image.png](image%2010.png)
+![image.png](pics/image%2010.png)
 
 Nhìn rõ 3 hàm nhỏ check input ta thấy:
 
-![image.png](image%2011.png)
+![image.png](pics/image%2011.png)
 
-![image.png](image%2012.png)
+![image.png](pics/image%2012.png)
 
-![image.png](image%2013.png)
+![image.png](pics/image%2013.png)
 
 2 phần đầu tạo script solve bằng AI
 
@@ -194,7 +194,7 @@ print(v2)
 
 Thực ra đến đây là ta giải được rồi vì bên dưới nó append v15 là input2 vào flag:
 
-![image.png](image%2014.png)
+![image.png](pics/image%2014.png)
 
 Nhưng để giải tiếp v3 ra:
 
@@ -205,7 +205,7 @@ a1 ^ 0x1234 = 480282 / 3 = 160094
 
 Thử vào ta được flag:
 
-![image.png](image%2015.png)
+![image.png](pics/image%2015.png)
 
 **→ Flag: PTITCTF{t1m3_is_n0t_l1n3ar_15347}**
 
@@ -220,11 +220,11 @@ Please focus on the global variable.
 
 Unzip file ra ta được
 
-![image.png](image%2016.png)
+![image.png](pics/image%2016.png)
 
 Sau một hồi tra cứu AI thì nó trả lời mình là
 
-![image.png](image%2017.png)
+![image.png](pics/image%2017.png)
 
 → Thử bắt nội dung bằng x64dbg (không được)
 
@@ -233,27 +233,27 @@ Sau một hồi tra cứu AI thì nó trả lời mình là
 
 8B 08 FF C1 89 08 → C7 00 A0 86 01 00
 
-![image.png](image%2018.png)
+![image.png](pics/image%2018.png)
 
 Fail → patch nhầm biến hiển thị, search immediate 100000 ra biến nào
 
 Tra AI một hồi mình thấy 1 đoạn dữ liệu bị IDA hiểu nhầm nên ko xử lý pseudo (Update: Không phải nó hiểu nhầm mà là do file dll kia nó compress đoạn đấy lại nên IDA không hiện), “u” ra rồi tìm thì thấy đoạn sau:
 
-![image.png](image%2019.png)
+![image.png](pics/image%2019.png)
 
 → khá khả nghi vì nó check =99999
 
 patch thành
 
-![image.png](image%2020.png)
+![image.png](pics/image%2020.png)
 
 Chạy ra hiện tượng lạ → đúng cmnr
 
-![image.png](image%2021.png)
+![image.png](pics/image%2021.png)
 
 Nó đổi mợ nó background của t rồi
 
-![image.png](image%2022.png)
+![image.png](pics/image%2022.png)
 
 **→ Flag: PTITCTF{SC4Ry_R3v_ChA11_R1G5T???}**
 
@@ -261,11 +261,11 @@ Nó đổi mợ nó background của t rồi
 
 Cho 1 file chall, dùng DIE ta có:
 
-![image.png](image%2023.png)
+![image.png](pics/image%2023.png)
 
 → Unpack nó ra bằng PyInstxtractor
 
-![image.png](image%2024.png)
+![image.png](pics/image%2024.png)
 
 Dùng lệnh này do mình từng liên kết direc của [PyInstxtractor.py](http://PyInstxtractor.py) với pyex.bat
 
@@ -459,11 +459,11 @@ if __name__ == "__main__":
 
 Chạy code ta dump được
 
-![image.png](image%2025.png)
+![image.png](pics/image%2025.png)
 
 Quan trọng hơn thì code đã ghi được mảng để xor ra Opcode
 
-![image.png](image%2026.png)
+![image.png](pics/image%2026.png)
 
 Phần trên khi đọc mình cũng biết được là ban đầu code kiểm tra input hash SHA256 có ra chuỗi này không:
 
@@ -498,7 +498,7 @@ Nội dung opcode:
 
 Đưa đoạn OPcode lên cho AI đọc ta được
 
-![image.png](image%2027.png)
+![image.png](pics/image%2027.png)
 
 Gen code đọc ngược Opcode ra flag:
 
@@ -648,7 +648,7 @@ if __name__ == "__main__":
     main()
 ```
 
-![image.png](image%2028.png)
+![image.png](pics/image%2028.png)
 
 **→ Flag: PTITCTF{UPvkfGVCWQR6F9U0dp4qn4JSs+XGebuYEgumYvXT/hw=}**
 
@@ -660,15 +660,15 @@ Bài cho mỗi 1 file exe dạng check flag nên là cho vào IDA luôn
 
 Tìm đầu vào trước main (khóa lỏ do đề bài nhắc tới thì thấy những thứ sau)
 
-![image.png](image%2029.png)
+![image.png](pics/image%2029.png)
 
-![image.png](image%2030.png)
+![image.png](pics/image%2030.png)
 
 Tra AI ra phép hash CRC32
 
-![image.png](image%2031.png)
+![image.png](pics/image%2031.png)
 
-![image.png](image%2032.png)
+![image.png](pics/image%2032.png)
 
 → Gen code brute ra được tại mỗi lần chỉ kiểm tra 1 kí tự
 
@@ -753,25 +753,25 @@ Bạn có thể nhìn thấy tín hiệu xuyên qua lớp nhiễu không?**
 
 Lại tiếp tục cho vào IDA thôi tại có đúng 1 file exe, vào thì nhìn qua đầu start nó gọi 1 hàm tạo window, xem hàm window thấy dài quá mình cho AI đọc ra được hàm gọi main()
 
-![image.png](image%2033.png)
+![image.png](pics/image%2033.png)
 
 Bấm vào hàm gọi đấy thì ra một chuỗi dài dằng dặc các hàm con, cũng ko bất ngờ lắm tại nhìn đề bài là biết rồi. Ngắm nghía một hồi mình thấy có mỗi cái hàm này là xuất hiện đúng 1 lần
 
-![image.png](image%2034.png)
+![image.png](pics/image%2034.png)
 
 Vào xem thì thấy nó luôn nhảy qua loc_403002+1
 
-![image.png](image%2035.png)
+![image.png](pics/image%2035.png)
 
 Đoạn này đòi nhập input 
 
-![image.png](image%2036.png)
+![image.png](pics/image%2036.png)
 
 Sau đấy tính inputlen
 
-![image.png](image%2037.png)
+![image.png](pics/image%2037.png)
 
-![image.png](image%2038.png)
+![image.png](pics/image%2038.png)
 
 Đoạn sau có (Gemini phân tích):
 
@@ -788,13 +788,13 @@ loc_4031A0:
 
 Vào soi 401E20 lại thấy nó nhảy qua 401E35+1
 
-![image.png](image%2039.png)
+![image.png](pics/image%2039.png)
 
-![image.png](image%2040.png)
+![image.png](pics/image%2040.png)
 
-![image.png](image%2041.png)
+![image.png](pics/image%2041.png)
 
-![image.png](image%2042.png)
+![image.png](pics/image%2042.png)
 
 Giờ dumb mỗi unk_412330, unk_412300, unk_412310, đoạn dữ liệu bị biến đổi của unk_4120F0 là viết được script
 
