@@ -1,0 +1,49 @@
+Baby VM 
+Không source, không comment, chỉ còn lại những opcode lạnh lùng. Máy ảo Python là đấu trường, stack là vũ khí, và bytecode là mật mã.
+Giải mã nó… hoặc bị nó nuốt chửng.
+
+
+Chronomancer
+Vượt ra ngoài tấm màn che của nhận thức, nơi các dòng thời gian hội tụ và rẽ nhánh, tồn tại một cơ chế cổ đại: Khóa của Thời Gian Pháp Sư. Nó không được rèn từ kim loại hay đá quý, mà từ chính những hằng số cơ bản của thực tại.
+Tương truyền rằng, người tạo ra nó đã niêm phong một bí mật có thể thay đổi cả quá khứ và tương lai. Để mở được cánh cổng này, bạn không cần chìa khóa, mà cần sự thấu suốt.
+Hãy căn chỉnh chúng một cách chính xác. Phá vỡ khóa, và dòng thời gian sẽ cúi đầu trước bạn. Thất bại, và bạn sẽ mãi mãi lạc lối trong những vòng lặp vô tận của thời gian.
+pass: infected
+
+
+R(everse)TIT
+Giữa hành lang im ắng là ổ khóa chỉ nhận đúng con dấu kiểm tra. Nhiệm vụ của bạn: phát hiện chỗ đối chiếu dấu ấn và vượt qua nghi thức canh gác.
+
+
+R(ush)TIT
+Cánh cửa đầu tiên là entry ẩn; sau khi tìm thấy, hãy giải nghĩa nghi thức so dấu ấn mà nó dùng rồi đập cho tới khi chiếc chìa khớp.
+pass: ptitctf2025
+
+
+AntiChatGPT
+Chào mừng, Nhà thám hiểm.
+Trước mắt bạn không phải là một chương trình, mà là một mê cung. Đường đi của nó quanh co khúc khuỷu, logic của nó là một sự hỗn loạn có chủ đích được thiết kế để đánh lừa những kẻ thiếu cảnh giác.
+Nhiều lời gọi là những tiếng vọng vô nghĩa. Nhiều nhánh dẫn đến ngõ cụt. Nhưng đâu đó trong mạng lưới rối rắm này, một mạch logic duy nhất, quan trọng đang chờ đợi.
+Nhiệm vụ của bạn không phải là đi theo mọi con đường, mà là tìm ra con đường đúng đắn duy nhất.
+Bạn có thể nhìn thấy tín hiệu xuyên qua lớp nhiễu không?
+pass: infected
+
+
+Summoner
+Neco-arc wants to be a summoner, help her summon 100000 souls to get a flag
+Use Arrow keys to move your character.
+Use ""+"" key to summon a soul
+System requirement
+	MINIMUM:
+	OS : Windows 10 22H2 or above (PHYSICAL PC ONLY)
+	Processor: Intel Celeron 440, 2.0GHz and above
+	Memory: 2 GB RAM
+	Graphics: GeForce 7900 / Radeon X1600 and above
+	DirectX: Version 9.0c
+	Network: Broadband Internet connection
+	Storage: 3 GB available space
+	Sound Card: Direct Sound*
+Hint : 
+	Check the DLLs around you
+	There is a huge backdoor in the program.
+	Please focus on the global variable.
+
